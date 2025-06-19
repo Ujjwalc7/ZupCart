@@ -10,13 +10,13 @@ const Products = () => {
       {/* sidebar */}
       <AdminSidebar />
       {/* main */}
-      <main className="overflow-y-auto grow hide-scrollbar py-2 px-4">
+      <main className="overflow-y-auto grow hide-scrollbar pt-20 px-4">
         <Link
-            to={"/admin/product/new"}
-            className="absolute right-10 top-4 bg-red-300 rounded-full w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] flex justify-center items-center hover:bg-red-400 active:bg-red-300 transition-all duration-100"
-          >
-            <AddIcon sx={{color: 'white'}}/>
-          </Link>
+          to={"/admin/product/new"}
+          className="absolute right-10 top-20 bg-red-300 rounded-full w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] flex justify-center items-center hover:bg-red-400 active:bg-red-300 transition-all duration-100"
+        >
+          <AddIcon sx={{ color: "white" }} />
+        </Link>
         <ProductTable />
       </main>
     </div>

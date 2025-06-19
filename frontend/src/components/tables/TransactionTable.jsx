@@ -1,7 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import TableHOC from "../admin/TableHOC";
 
- const data = [
+const data = [
   {
     id: 1,
     user: "Cristiano Ronaldo",
@@ -9,7 +9,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 6,
@@ -54,7 +54,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 7,
@@ -63,7 +63,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 8,
@@ -72,7 +72,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Shipped",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 9,
@@ -81,7 +81,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 10,
@@ -90,7 +90,7 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Processing",
-    action: "Manage"
+    action: "Manage",
   },
   {
     id: 11,
@@ -99,8 +99,8 @@ import TableHOC from "../admin/TableHOC";
     discount: 400,
     quantity: 3,
     status: "Delivered",
-    action: "Manage"
-  }
+    action: "Manage",
+  },
 ];
 
 const columnHelper = createColumnHelper();
@@ -134,7 +134,11 @@ const columns = [
 
 const TransactionTable = () => {
   return (
-    <TableHOC title={{heading: 'Transaction', link: 'transaction'}} data={data} columns={columns} />
-  )
-}
-export default TransactionTable
+    <TableHOC
+      title={{ heading: "TRANSACTIONS", link: "transaction" }}
+      data={data}
+      columns={columns}
+    />
+  );
+};
+export default TransactionTable;

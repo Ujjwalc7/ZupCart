@@ -1,17 +1,12 @@
 @import "tailwindcss";
 
-@layer base{
+@layer base {
   /* Chrome, Safari, Edge, Opera */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 @layer utilities {
@@ -43,16 +38,15 @@ input[type="number"] {
     }
   }
 
-  .customScrollbar::-webkit-scrollbar{
+  .customScrollbar::-webkit-scrollbar {
     width: 6px;
     background: rgb(255, 255, 255);
   }
-  .customScrollbar::-webkit-scrollbar-thumb{
+  .customScrollbar::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: rgba(207, 207, 207, 0.689);
   }
-  .customScrollbar::-webkit-scrollbar-thumb:hover{
+  .customScrollbar::-webkit-scrollbar-thumb:hover {
     background: rgb(151, 151, 151);
   }
-
 }

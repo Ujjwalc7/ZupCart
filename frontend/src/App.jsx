@@ -24,7 +24,8 @@ const Home = lazy(() => import("./pages/Home.jsx"));
 const Search = lazy(() => import("./pages/Search.jsx"));
 const Cart = lazy(() => import("./pages/Cart.jsx"));
 const Shipping = lazy(() => import("./pages/Shipping.jsx"));
-const Login = lazy(()=>import('./pages/Login.jsx'))
+const Login = lazy(() => import("./pages/Login.jsx"));
+const Orders = lazy(() => import("./pages/Orders.jsx"));
 
 function App() {
   const [count, setCount] = useState(0);
@@ -46,6 +47,7 @@ function App() {
           {/* logged in user routes */}
           <Route>
             <Route path="/shipping" element={<Shipping />} />
+            <Route path="/orders" element={<Orders />} />
           </Route>
 
           {/* admin routes */}

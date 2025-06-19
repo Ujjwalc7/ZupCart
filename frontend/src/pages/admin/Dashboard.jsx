@@ -11,8 +11,6 @@ import { useState } from "react";
 
 const url = "https://cdn-icons-png.flaticon.com/512/219/219983.png";
 
-
-
 const Dashboard = () => {
   const widgetInfo = [
     {
@@ -47,20 +45,17 @@ const Dashboard = () => {
     { category: "Mobiles", percentage: 70 },
   ];
 
-
-
-
   return (
     <div className="dashboardContainer flex h-screen">
       {/* sidebar */}
       <AdminSidebar />
       {/* main */}
-      <main className="overflow-y-auto bg-gray-100 flex-1 hide-scrollbar pl-4 pr-2">
+      <main className="overflow-y-auto bg-gray-100 flex-1 hide-scrollbar px-4 pt-16">
         <section className="searchBar mb-4 border-b border-gray-300">
           <div className="w-full h-[50px] flex items-center ">
             <form className="flex-1 flex items-center gap-2">
               <button type="submit">
-              <SearchIcon sx={{ width: "18px", cursor: "pointer" }} />
+                <SearchIcon sx={{ width: "18px", cursor: "pointer" }} />
               </button>
               <input
                 type="text"
@@ -128,7 +123,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="revenueChart flex-1 flex-col justify-center items-center bg-white rounded-md p-2">
-            <RevenueTbale/>
+            <RevenueTbale />
           </div>
         </section>
       </main>

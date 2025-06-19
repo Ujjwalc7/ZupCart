@@ -1,18 +1,16 @@
-import AdminSidebar from "../../components/admin/AdminSidebar"
-import CustomerTable from "../../components/tables/CustomerTable"
+import AdminSidebar from "../../components/admin/AdminSidebar";
+import CustomerTable from "../../components/tables/CustomerTable";
 
 const Customers = () => {
-
   return (
     <div className="dashboardContainer flex h-screen">
       {/* sidebar */}
-      <AdminSidebar/>
+      <AdminSidebar />
       {/* main */}
-      <main className="overflow-y-auto grow hide-scrollbar py-2 px-4">
+      <main className="overflow-y-auto grow hide-scrollbar pt-20 px-4">
         <CustomerTable />
       </main>
-      
     </div>
-  )
-}
-export default Customers
+  );
+};
+export default Customers;

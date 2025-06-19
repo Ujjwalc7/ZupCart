@@ -6,7 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useState } from "react";
 
-const user = { id: null, role: "admin" };
+const user = { id: 13, role: "admin" };
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,10 @@ const Header = () => {
           >
             <PersonIcon />
           </button>
-          <dialog open={open} className="absolute z-20 top-[40px] left-[-100px]">
+          <dialog
+            open={open}
+            className="absolute z-20 top-[40px] left-[-100px]"
+          >
             <div className="flex flex-col shadow-md rounded-md">
               {user?.role === "admin" && (
                 <Link

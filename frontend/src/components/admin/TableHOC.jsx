@@ -36,7 +36,7 @@ const TableHOC = ({ title, data, columns }) => {
 
   return (
     <div className="flex w-full flex-col items-center gap-6 pt-6">
-      <h1 className="w-full font-semibold md:text-lg">{title.heading}</h1>
+      <h1 className="w-full md:text-2xl">{title.heading}</h1>
       <div className="w-full max-md:w-screen max-md:overflow-x-auto">
         <table className="w-full text-center">
           <thead>
@@ -92,7 +92,17 @@ const TableHOC = ({ title, data, columns }) => {
                       <td key={cell.id}>
                         {cell.getValue() === "Manage" ? (
                           <Link
-                            to={`/admin/${title.link}/${cell.id}`}
+                            to={`/admin/${title.link}/${cell.row.original.id}`}
+                            className="text-violet-600 p-1 bg-violet-200 rounded cursor-pointer hover:bg-violet-300 text-sm active:bg-violet-200"
+                          >
+                            {flexRender(
+                              cell.column.columnDef.cell,
+                              cell.getContext()
+                            )}
+                          </Link>
+                        ) : cell.getValue() === "View" ? (
+                          <Link
+                            to={`/${title.link}/${cell.row.original.id}`}
                             className="text-violet-600 p-1 bg-violet-200 rounded cursor-pointer hover:bg-violet-300 text-sm active:bg-violet-200"
                           >
                             {flexRender(
