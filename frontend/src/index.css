@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@layer base{
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        letter-spacing: .5px;
+    }
+
+    body{
+        user-select: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+
+    a{
+        text-decoration: none;
+    }
+    
+}
+@layer utilities{
+    .hide-scrollbar::-webkit-scrollbar {
+     display: none; 
+    }
+    .widgetCircle{
+        &::before{
+            content: '';
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            position: absolute;
+            border-radius: 100%;
+        }
+    }
+}

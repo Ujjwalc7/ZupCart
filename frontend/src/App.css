@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base{
+  /* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+}
+
+@layer utilities {
+  .banner {
+    width: 100%;
+    height: 400px;
+    background-image: url("https://images.pexels.com/photos/414781/pexels-photo-414781.jpeg?_gl=1*7e1zpp*_ga*OTI5Nzk4MjM4LjE3Mzk4NjQ0MjE.*_ga_8JE65Q40S6*czE3NTAyMzg4NDIkbzE3JGcxJHQxNzUwMjM4ODg1JGoxNyRsMCRoMA..");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background: rgb(202, 202, 202);
+    }
+  }
+
+  .addBtn {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: hsl(217, 0%, 0%);
+      opacity: 0.4;
+    }
+  }
+
+  .customScrollbar::-webkit-scrollbar{
+    width: 6px;
+    background: rgb(255, 255, 255);
+  }
+  .customScrollbar::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: rgba(207, 207, 207, 0.689);
+  }
+  .customScrollbar::-webkit-scrollbar-thumb:hover{
+    background: rgb(151, 151, 151);
+  }
+
+}
