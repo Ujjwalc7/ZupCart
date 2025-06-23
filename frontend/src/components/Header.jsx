@@ -6,7 +6,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useState } from "react";
 
-const user = { id: 13, role: "admin" };
+const user = { id: null, role: "admin" };
 
 const Header = () => {
   const [open, setOpen] = useState(false);

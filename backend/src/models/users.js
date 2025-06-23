@@ -6,6 +6,7 @@ const schema = new mongoose.Schema(
     _id: {
       type: String,
       required: [true, "Please enter ID"],
+      unique: [true, "Duplicate Key"],
     },
     email: {
       type: String,
