@@ -5,12 +5,13 @@ import {
   getUserById,
   deleteUserById,
 } from "../controllers/userController.js";
+import { adminOnly } from "../middlewares/auth.js";
 
 const router = express.Router();
 
 router.post("/new", newUser);
-router.get("/all", getAllUser);
-router.get("/:id", getUserById);
-router.delete("/:id", deleteUserById);
+router.get("/all", adminOnly, getAllUser);
+router.get("/:id", adminOnly, getUserById);
+router.delete("/:id", adminOnly, deleteUserById);
 
 export default router;

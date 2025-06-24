@@ -2,16 +2,21 @@ import express from "express";
 import userRouter from "./routes/user.js";
 import { connectDB } from "./utils/features.js";
 import { errorMiddleware } from "./middlewares/error.js";
+import productRouter from "./routes/product.js";
+
 const PROT = 3000;
 connectDB();
 
 const app = express();
 
-// middleware
 app.use(express.json());
+app.use("/uploads", express.static("uploads"));
 
-// using routes
+// user routes
 app.use("/api/v1/user", userRouter);
+
+// product routes
+app.use("/api/v1/product", productRouter);
 
 app.use(errorMiddleware);
 

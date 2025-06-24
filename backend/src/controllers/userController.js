@@ -6,6 +6,8 @@ export const newUser = async (req, res, next) => {
     const { name, email, photo, gender, role, _id, dob } = req.body;
 
     let user = await User.findById(_id);
+    console.log(user.age);
+
     if (user) {
       return res
         .status(200)
@@ -63,7 +65,6 @@ export const getUserById = async (req, res, next) => {
 export const deleteUserById = async (req, res, next) => {
   try {
     const _id = req.params.id;
-
     const user = await User.findById(_id);
     if (!user) {
       throw new ErrorHandler("Invalid ID", 400);
