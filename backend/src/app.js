@@ -3,10 +3,11 @@ import userRouter from "./routes/user.js";
 import { connectDB } from "./utils/features.js";
 import { errorMiddleware } from "./middlewares/error.js";
 import productRouter from "./routes/product.js";
+import NodeCache from "node-cache";
 
 const PROT = 3000;
 connectDB();
-
+export const cache = new NodeCache();
 const app = express();
 
 app.use(express.json());

@@ -14,6 +14,11 @@ const Search = () => {
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState([100, 5000]);
 
+  // sending price array into url
+  // const params = new URLSearchParams()
+  // price.forEach(p => params.append("price", p))
+  // const url = `http://localhost:3000/api/v1/product/all?${params.toString()}`
+
   const handleChange = (event, newValue) => {
     setPrice(newValue);
   };
@@ -28,6 +33,8 @@ const Search = () => {
       clearTimeout(id);
     };
   }, [search]);
+
+  console.log(price);
 
   return (
     <div className="flex max-md:flex-col gap-4 h-screen overflow-y-auto hide-scrollbar">
